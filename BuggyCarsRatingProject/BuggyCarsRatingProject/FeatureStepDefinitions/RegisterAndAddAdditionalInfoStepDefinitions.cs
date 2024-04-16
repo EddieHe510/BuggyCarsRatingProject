@@ -93,6 +93,14 @@ namespace BuggyCarsRatingProject.FeatureStepDefinitions
             additionalInfo.ClickSaveButton();
         }
 
+        [Then(@"I should be able to see the info save successfully message")]
+        public void ThenIShouldBeAbleToSeeTheInfoSaveSuccessfullyMessage()
+        {
+            string expecedSuccessMessage = additionalInfo.assertMessage();
+            Assert.That(expecedSuccessMessage == "The profile has been saved successful", "Actual message and expected message do not match!");
+        }
+
+
         [Then(@"I click logout to logout the account")]
         public void ThenIClickLogoutToLogoutTheAccount()
         {

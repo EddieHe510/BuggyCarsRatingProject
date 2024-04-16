@@ -14,6 +14,7 @@ Then I should be able to go to my profile page to add additional info
 Then I enter valid '<userGender>','<userAge>', '<userAddress>', '<userPhone>' to my additional info, and select gender and hobby
 And I want to change password and enter '<currentPassword>', '<newPassword>', '<newConfirmPassword>'
 Then I click the Save button to save the changes
+And I should be able to see the info save successfully message
 Then I click logout to logout the account
 Then I use valid username and new password to login to the portal
 

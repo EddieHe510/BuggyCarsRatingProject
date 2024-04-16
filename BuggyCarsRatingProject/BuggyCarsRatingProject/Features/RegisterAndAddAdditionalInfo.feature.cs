@@ -129,9 +129,12 @@ testRunner.And(string.Format("I want to change password and enter \'{0}\', \'{1}
 testRunner.Then("I click the Save button to save the changes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 17
-testRunner.Then("I click logout to logout the account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I should be able to see the info save successfully message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
+testRunner.Then("I click logout to logout the account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 19
 testRunner.Then("I use valid username and new password to login to the portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

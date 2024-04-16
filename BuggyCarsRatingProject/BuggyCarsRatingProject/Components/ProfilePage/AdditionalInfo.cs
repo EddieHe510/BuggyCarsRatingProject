@@ -26,6 +26,9 @@ namespace BuggyCarsRatingProject.Components.ProfilePage
         private IWebElement saveButton => driver.FindElement(By.XPath("//*[contains(text(), 'Save')]"));
         private IWebElement cancelButton => driver.FindElement(By.XPath("//*[contains(text(), 'Cancel')]"));
 
+        // Assert profile save message
+        private IWebElement infoSaveSuccessfulMessage => driver.FindElement(By.XPath("//div[2][contains(text(), 'The profile has been saved successful')]"));
+
 
         public void goToProfilePage()
         {
@@ -62,5 +65,11 @@ namespace BuggyCarsRatingProject.Components.ProfilePage
         {
             cancelButton.Click();
         }
+        public string assertMessage()
+        {
+            FluentWait.WaitToBeVisible("XPath", 5, "//div[2][contains(text(), 'The profile has been saved successful')]");
+            return infoSaveSuccessfulMessage.Text;
+        }
+
     }
 }
